@@ -6,18 +6,17 @@
     <title>Concurso de Pelotas</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Georgia, serif;
 	
-            background-image: url('Aniv-OTE.png');
-            background-size: cover; /* Hace que la imagen cubra toda la página */
+            background-image: url('Aniv-OTE.png'); /*AQUI VA LA FOTO, TIENE QUE ESTAR EN LA MISMA CARPETA QUE EL TXT*/
+            background-size: 100%; /* Hace que la imagen cubra toda la página */
             background-position: center; /* Centra la imagen de fondo */
+	    background-attachment: fixed;
             background-repeat: no-repeat; /* Evita que la imagen se repita */
-            /*min-height: 100vh*/; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
-	    width: 100vw;
-	    height: 100vh;
+            /*min-height: 100%*/; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
+	    width: 100%;
+	    height: 100%;
             text-align: center;
-            margin: 0;
-            padding: 0;
 	    overflow: hidden;
 
  
@@ -26,7 +25,6 @@
             margin-top: 50px;
             border-radius: 10px; /* Bordes redondeados */
             padding: 20px; /* Espacio interno */
-            
         }
         h1 {
             color: white; /* Cambia el color del texto del encabezado a blanco */
@@ -39,7 +37,7 @@
         .tombola {
             width: 300px;
             height: 300px;
-            border: 0px;
+            border: 0px solid #000;
             border-radius: 50%;
             margin: 50px auto;
             position: relative;
@@ -55,7 +53,7 @@
             font-size: 10vw;
             font-weight: bold;
             color: white;
-            margin-top: 30px;
+            margin-top: 13vw;
         }
         .result {
     display: none; /* Mantiene el elemento oculto por defecto */
@@ -80,10 +78,9 @@
         }
         .cinta {
             width: 150000%;
-            overflow: hidden;
-            padding: 10	px 0;
-            margin-top: 205px;
-            position: relative;
+            padding: 10px ;
+            margin-top: 18vh;
+            position: fixed;
         }
         .scroll {
             display: flex; /* Usar flexbox para colocar elementos en línea */
@@ -104,7 +101,7 @@
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
             white-space: nowrap;
-            font-size: 50px; /* Aumentar el tamaño de la fuente */
+            font-size: 35px; /* Aumentar el tamaño de la fuente */
         }
 
 	.boxA {
@@ -122,7 +119,8 @@
 
         /* Estilo para el contador */
         #countdown {
-            font-size: 350px;
+	    font-family: Arial, serif;
+            font-size: 300px;
             font-weight: bold;
             margin-top: 20px;
             color: black;
@@ -134,8 +132,8 @@
         }
         /* Estilo del botón */
         #startBtn {
-            margin-top: 8px; /* Mueve el botón hacia abajo */
-            font-size: 35px; /* Aumentar el tamaño de la fuente */
+            margin-top: 20vw; /* Mueve el botón hacia abajo */
+            font-size: 18px; /* Aumentar el tamaño de la fuente */
             padding: 15px 30px; /* Aumentar el padding para hacer el botón más grande */
             border: 2px solid #000; /* Añadir borde */
             border-radius: 10px; /* Bordes redondeados */
@@ -1568,7 +1566,7 @@
         // Ocultar el botón de inicio
         document.getElementById("startBtn").style.display = "none"; // Ocultar el botón al iniciar el sorteo
         
-        let countdown = 10; // Tiempo del contador en segundos
+        let countdown = 1; // Tiempo del contador en segundos
         const countdownInterval = setInterval(() => {
             document.getElementById("countdown").innerText = countdown;
             countdown--;
