@@ -18,7 +18,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-	    overflow: hidden;
+	    
 
  
         }
@@ -87,14 +87,18 @@
         }
         .cinta2 {
             width: 150000%;
-            overflow: hidden;
+	    overflow: hidden;
             padding: 10px 0;
             margin-top: 10px;
-            position: relative;
         }
         .scroll {
             display: flex;
             animation: scroll 15000s linear infinite;
+            will-change: transform;
+	}
+ 	.scroll2 {
+            display: flex;
+            animation: scrollRight 15000s linear infinite;
             will-change: transform;
         }
         @keyframes scroll {
@@ -102,15 +106,10 @@
             to { transform: translateX(-100%); }
         }
         @keyframes scrollRight {
-            from { transform: translateX(0); }
-            to { transform: translateX(-100%); }
+            from { transform: translateX(-10%); }
+            to { transform: translateX(100%); }
         }
-        .cinta2 .scroll {
-            display: flex;
-            animation: scrollRight 15000s linear infinite;
-            will-change: transform;
-        }
-        .box {
+          .box {
             display: inline-block;
             margin: 0 15px; /* Espacio entre las cajas */
             padding: 30px;
@@ -860,7 +859,7 @@
         <div id="participantsList2">
             <h2><br></h2>
             <div class="cinta2" id="cinta2">
-                <div class="scroll">
+                <div class="scroll2">
                     <div class="box"><span>Cristian Murillo Vargas - 2783</span></div>
 <div class="box"><span>Edgar Escobar Herrera - 6100</span></div>
 <div class="box"><span>Marco Solis - 583</span></div>
