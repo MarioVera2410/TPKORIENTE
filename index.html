@@ -1198,7 +1198,7 @@
             // Filtrar los participantes más cercanos que no excedan el número de pelotas
             const closestParticipants = validParticipants.filter(participant => Math.abs(participant.guess - actualBalls) === closestDiff);
 
-            let closestText = `<div class="boxA">No hubo ganadores exactos. Los más cercanos fueron:</div><br>`;
+            let closestText = `<div class="boxA">Los más cercanos fueron:</div><br>`;
             closestParticipants.forEach(participant => {
                 closestText += `<div class="boxA">${participant.name} (${participant.guess} pelotas)</div>`;
             });
